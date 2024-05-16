@@ -20,7 +20,6 @@ const SuggestionsContainer = () =>{
         setVideos(json.items);
         
     }
-    console.log(videos);
     return(
       <div className=''>
         <div className="mt-4 ml-2">

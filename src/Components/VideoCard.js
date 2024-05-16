@@ -22,7 +22,7 @@ const VideoCard = ({ data }) => {
   }, [channelId]);
 
   return (
-    <div className='w-[260px] m-2 mx-2'>
+    <div className='w-[340px] m-2 mx-2'>
       <img alt='' className="rounded-lg" src={thumbnails?.medium?.url} />
       <div className="flex">
         <div className="flex-items-start">

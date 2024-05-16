@@ -1,44 +1,44 @@
 import user from '../Components/Images/user.png'
 const commentsData = [
     {
-        name: 'Santhosh',
+        name: 'Test1',
         text: 'commenyts djc ceimc kieie',
         replies: [
             {
-                name: 'santhosh',
+                name: 'Test2',
                 text: 'commenyts djc ceimc kieie',
                 replies: [
                     {
-                        name: 'Santhosh',
+                        name: 'Test3',
                         text: 'commenyts djc ceimc kieie',
                         replies: []
                     },
                     {
-                        name: 'Santhosh',
+                        name: 'Test4',
                         text: 'commenyts djc ceimc kieie',
                         replies: []
                     },
                 ]
             },
             {
-                name: 'santhosh',
+                name: 'Test5',
                 text: 'commenyts djc ceimc kieie',
                 replies: []
             },
         ]
     },
     {
-        name: 'Santhosh',
+        name: 'Test6',
         text: 'commenyts djc ceimc kieie',
         replies: []
     },
     {
-        name: 'Santhosh',
+        name: 'Test7',
         text: 'commenyts djc ceimc kieie',
         replies: []
     },
     {
-        name: 'Santhosh',
+        name: 'Test8',
         text: 'commenyts djc ceimc kieie',
         replies: []
     },

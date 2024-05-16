@@ -16,7 +16,7 @@ const ButtonComponent = ({data}) =>{
             setAddCategory(data?.url)
             navigate('/')
         }
-    } className="p-1 mx-3 mt-2 px-5 bg-gray-300 rounded-lg">{data?.name}</button>
+    } className="p-1 mx-3 mt-2 px-5 bg-gray-200 rounded-lg text-sm hover:bg-gray-300">{data?.name}</button>
     )
 }
 

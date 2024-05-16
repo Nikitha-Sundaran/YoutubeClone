@@ -21,14 +21,12 @@ const WatchVideoComponent = () => {
   const [video, setVideo] = useState(null);
   useEffect(() => {
     fetchDataFromApi(`videos?part=contentDetails%2Csnippet%2Cstatistics%2Cdetails&id=${videoId}`).then((res) => {
-      console.log(res.items[0]);
       setVideo(res);
     });
   },[channelId])
 
   useEffect(() => {
     fetchDataFromApi(`channels?part=snippet%2Cstatistics&id=${channelId}`).then((res) => {
-      console.log(res);
       setChannelData(res);
     });
   },[channelId])

@@ -9,7 +9,6 @@ import { toggleMenu } from "../utils/appSlice";
 import Shimmer from "./Shimmer";
 const VideoContainer = () =>{
     const category = useSelector(store =>store.category.category)
-    console.log(category);
     const [videos, setVideos] = useState([]);
     const[isLoading,setIsLoading] = useState(false);
     const dispatch  = useDispatch();
@@ -27,19 +26,17 @@ const VideoContainer = () =>{
     const getYoutubeData = async() =>{
         const data = await fetch(YOUTUBE_API);
         const json =await data.json();
-        console.log(json.items);
         setVideos(json.items);
         
     }
     const suggestData = async() =>{
         const data = await fetch(YOUTUBE_SEARCH_API+category+SEARCH_API_KEY)
         const json = await data.json()
-        console.log(json.items);
         setVideos(json.items);
     }
     return(
-        <div className="mt-24">
-            <div className="ml-4">
+        <div className="mt-40">
+            <div className="ml-4 fixed bg-white top-20 w-full py-3">
             <ButtonContainer />
             </div>
             {isLoading ? 

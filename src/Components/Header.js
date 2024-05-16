@@ -10,6 +10,7 @@ import hamburg from '../Components/Images/hamburg.jpg';
 import youtube from '../Components/Images/youtube.jpg';
 import github from '../Components/Images/github.png';
 import { addCategory } from '../utils/categorySlice';
+import { IoSearchOutline } from "react-icons/io5";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -66,23 +67,24 @@ const Header = () => {
         </Link>
       </div>
       <div className='col-span-10 ml-12 flex justify-center'>
-        <div className='w-full max-w-md'>
+        <div className='w-full max-w-xl'>
           <div className='flex items-center'>
             <input
               className='w-full p-2 rounded-l-full border border-b-gray-300'
+              placeholder='Search'
               value={search}
               onFocus={() => setShowSuggestions(true)}
               onBlur={handleBlur}
               onChange={(e) => setSearch(e.target.value)}
             />
             <button
-              className='p-2 px-4 rounded-r-full border border-b-gray-300'
+              className='p-2 px-4 py-3 rounded-r-full border border-b-gray-300 bg-gray-50 hover:bg-gray-100'
               onClick={() => {
                 navigate('/search?query=' + search);
               }}
             >
-              <span role='img' aria-label='Search' className=''>
-                🔍
+              <span role='img' aria-label='Search'>
+                <IoSearchOutline/>
               </span>
             </button>
           </div>
@@ -100,7 +102,7 @@ const Header = () => {
                         }}
                       >
                         <span role='img' aria-label='Search' className=''>
-                          🔍
+                          <IoSearchOutline/>
                         </span>
                         <span className='ml-2'>{data}</span>
                       </li>

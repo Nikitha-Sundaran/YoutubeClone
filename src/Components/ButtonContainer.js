@@ -1,7 +1,7 @@
 import ButtonComponent from "./ButtonComponent";
 const ButtonContainer = ()=>{
      const button = [
-        { name: "ALL", url: "latest" },
+        { name: "All", url: "latest" },
         { name: "Music", url: "music" },
         { name: "Weather", url: "weather" },
         { name: "WC2023", url: "WC2023" },
@@ -12,9 +12,11 @@ const ButtonContainer = ()=>{
         { name: "IPL", url: "IPL" },
     ];
     return(
-     button.map((data,index)=>{
+        <div className="">
+        {button.map((data,index)=>{
             return <ButtonComponent key={index} data={data}/>
-        })
+        })}
+        </div>
     )
     }
 export default ButtonContainer;

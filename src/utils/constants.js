@@ -50,7 +50,6 @@ export const YOUTUBE_SEARCH_API = `https://youtube.googleapis.com/youtube/v3/sea
 export const UseChannelAPI = async(id) =>{
     const data = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${id}&key=${GOOGLE_API_KEY}`);
     const json = await data.json();
-    // console.log(json);
     return json;
 }
 
@@ -68,7 +67,6 @@ export const fetchDataFromApi = async (url) => {
 try {
 	const response = await fetch(`${BASE_URL}/${url}`, options);
 	const result = await response.json();
-	console.log(result);
   return result;
 } catch (error) {
 	console.error(error);

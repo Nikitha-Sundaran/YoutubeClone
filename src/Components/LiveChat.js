@@ -10,7 +10,6 @@ const data = useSelector(store=> store.chat.messages)
 const [message,setMessage] = useState('')
     useEffect(()=>{
         const i=setInterval(()=>{
-            // console.log('hi');
             dispatch(addMessage({
                 name:randomNames(),
                 message:randomMessages(20),
